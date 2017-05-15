@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded',function(){
 			controlerBar=setInterval(progress,1000);
 		}else{
 			oAudio.pause();
-			// clearInterval(controler);
-			// clearInterval(controlerBar)
+			clearInterval(controler);
+			clearInterval(controlerBar);
 			oStartImg.src='images/stop.png';
 			play=true;	
 		}
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		var cuT = oAudio.currentTime,
 			toT = oAudio.duration;
 		var oToTalWidth=oToTal.offsetWidth/20;
-		progress = (cuT/toT)*oToTalWidth-0.75;
+		progress = (cuT/toT)*oToTalWidth;
 		
 		oHadPlay.style.width=progress+'rem';
 		oBar.style.left=progress+'rem';
