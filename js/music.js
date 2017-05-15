@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		    			widthBar=0
 		    		}
 		    	}			    		
-	    		oBar.style.left = widthBar-0.75 + "rem";
+	    		oBar.style.left = widthBar+ "rem";
 	           	oHadPlay.style.width=widthBar+'rem';
 		    	//不让进度条超出页面		    	
 		    	time()
