@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded',function(){
         oAudio.addEventListener('ended',function(){
         	oStartImg.src='images/stop.png';
         	play=true;
-        },false)
-         oAudio.addEventListener('loadedmetadata',function(){
-    		time();
-       },false)
+        },false);
+	oAudio.addEventListener("loadedmetadata",function(){
+		time();
+	},false);
 },false)
