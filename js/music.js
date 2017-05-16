@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded',function(){
         	play=true;
         },false)
         oAudio.addEventListener('loadedmetadata',function(){
-		alert(allTimer)
-   		alert(allTimer.innerHTML)
+		time()
+		allTimer.innerHTML='00:61'
 	},false)
 },false)
