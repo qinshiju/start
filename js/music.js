@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded',function(){
 			controlerBar=setInterval(progress,1000);
 		}else{
 			oAudio.pause();
-			// clearInterval(controler);
-			// clearInterval(controlerBar)
+			clearInterval(controler);
+			clearInterval(controlerBar);
 			oStartImg.src='images/stop.png';
 			play=true;	
 		}
@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded',function(){
 		    			widthBar=0
 		    		}
 		    	}			    		
-	    		oBar.style.left = widthBar + "rem";
+
+	    		oBar.style.left = widthBar+ "rem";
 	           	oHadPlay.style.width=widthBar+'rem';
 		    	//不让进度条超出页面		    	
 		    	// time()
@@ -130,5 +131,7 @@ document.addEventListener('DOMContentLoaded',function(){
         	play=true;
         },false)
         // oAudio.onloadedmetadata=function(){time()}
-        oAudio.addEventListener('durationchange',function(){time()},false)
+	oAudio.addEventListener("durationchange",function(){
+		time();
+	},false);
 },false)
