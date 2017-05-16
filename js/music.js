@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded',function(){
         	oStartImg.src='images/stop.png';
         	play=true;
         },false)
-        // oAudio.onloadedmetadata=function(){time()}
+        oAudio.addEventListener('loadedmetadata',function(){time()},false)
 	oAudio.addEventListener("durationchange",function(){
 		time();
 	},false);
