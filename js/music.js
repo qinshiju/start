@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded',function(){
         	oStartImg.src='images/stop.png';
         	play=true;
         },false);
-	oAudio.addEventListener("loadedmetadata",function(){
+	oAudio.addEventListener("durationchange",function(){
 		time();
 	},false);
 },false)
