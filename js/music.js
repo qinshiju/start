@@ -127,17 +127,14 @@ document.addEventListener('DOMContentLoaded',function(){
     		e.preventDefault();
     		
    		}, false);
-	     oAudio.addEventListener('loadedmetadata',function(){
-   		var allT=oAudio.duration;
-   		
-   		allTimer.innerHTML="04:61"
-   		// console.log(allTimer)
-   		// alert(allTimer)
-   		// alert(allTimer.innerHTML)
-   		// time();
-   },false)
-	oAudio.addEventListener('ended',function(){
-		oStartImg.src='images/stop.png';
-		play=true;
-	},false)
+
+	     
+		oAudio.addEventListener('ended',function(){
+			oStartImg.src='images/stop.png';
+			play=true;
+		},false)
+		oAudio.addEventListener('loadedmetadata',function(){
+			time()
+			allTimer.innerHTML='00:61';
+		},false)
 },false)
