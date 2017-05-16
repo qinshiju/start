@@ -131,7 +131,6 @@ document.addEventListener('DOMContentLoaded',function(){
         	play=true;
         },false)
         oAudio.addEventListener('loadedmetadata',function(){
-		alert('执行了')
-		time()
+		allTimer.innerHTML="04:61"
 	},false)
 },false)
