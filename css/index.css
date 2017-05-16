@@ -15,7 +15,7 @@
 .sound li .song-singer{
 	font-family: 'PingFang-SC-Regular';
 	display: inline-block;
-	width: 10.22rem;
+	width: 14rem;
 }
 .sound li{
 	margin-top: .6rem/* 24px */;
@@ -57,7 +57,6 @@
 	border-radius: .8rem/* 32px */;
 	text-align: center;
 	line-height: 1.625rem/* 65px */;
-	margin-left: .8rem/* 32px */;
 }
 .my-look{
 	margin-right: -3rem;

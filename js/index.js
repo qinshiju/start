@@ -43,11 +43,8 @@ document.addEventListener('DOMContentLoaded',function(){
 				'<span class="song">'+arr[i].soung+'</span>'+
 				'<span  class="singer">'+arr[i].singer+'</span>'+
 			'</a>'+
-			'<div class="shar-del clearFix">'+
-				'<a href="music.html" title="">'+
-						'<span class="share fl">'+arr[i].about[0].share+'</span>'+
-					'</a>'+
-				'<span class="delete fr">'+arr[i].about[0].delete+'</span>'+
+			'<div class="shar-del">'+
+				'<span class="delete">'+arr[i].about[0].delete+'</span>'+
 			'</div>'+
 			'<div class="my-look">'+
 				'<input type="button" name="" value="自己可见">'+

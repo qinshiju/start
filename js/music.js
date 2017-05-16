@@ -21,28 +21,29 @@ document.addEventListener('DOMContentLoaded',function(){
 	var numDragpaddingLeft=0;
 	var num=1;
 	var y=1;
-	oMusic.src='images/rmusic.png'
-	oCountMusic.innerHTML=n++;
-	var oNav=document.querySelector('.nav');
-	oNav.addEventListener('click',function(){
-		oNav.style.display='none';
-	},false)
-	oLove.addEventListener('click',function(arr){
-		if(num){
-			oCountLove.innerHTML=y;
-			oLove.src='images/rLove.png';
-			num=0;
-			console.log(y)
-		}else{
-			if (num==0) {
-				y=0;
-				oCountLove.innerHTML=y;
-				oLove.src='images/love.png';
-				num=1;
-				y=1;
-			}
-		}
-	},false)
+	// oMusic.src='images/rmusic.png'
+	// oCountMusic.innerHTML=n++;
+	// var oNav=document.querySelector('.nav');
+	// oNav.addEventListener('click',function(){
+	// 	oNav.style.display='none';
+	// },false)
+	// oLove.addEventListener('click',function(arr){
+	// 	if(num){
+	// 		oCountLove.innerHTML=y;
+	// 		oLove.src='images/rLove.png';
+	// 		num=0;
+	// 		console.log(y)
+	// 	}else{
+	// 		if (num==0) {
+	// 			y=0;
+	// 			oCountLove.innerHTML=y;
+	// 			oLove.src='images/love.png';
+	// 			num=1;
+	// 			y=1;
+	// 		}
+	// 	}
+	// },false)
+
 	oStart.addEventListener('click',function(){
 		if (play) {
 			oAudio.play()
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		var oToTalWidth=oToTal.offsetWidth/20;
 		progress = (cuT/toT)*oToTalWidth;
 		
-		oHadPlay.style.width=progress+'rem';
+		oHadPlay.style.width=progress+0.1+'rem';
 		oBar.style.left=progress+'rem';
 		return oHadPlay.style.width,oBar.style.left
 
@@ -126,12 +127,17 @@ document.addEventListener('DOMContentLoaded',function(){
     		e.preventDefault();
     		
    		}, false);
-        oAudio.addEventListener('ended',function(){
-        	oStartImg.src='images/stop.png';
-        	play=true;
-        },false)
-        // oAudio.onloadedmetadata=function(){time()}
-	oAudio.addEventListener("durationchange",function(){
-		time();
-	},false);
+	     oAudio.addEventListener('loadedmetadata',function(){
+   		var allT=oAudio.duration;
+   		
+   		allTimer.innerHTML="04:61"
+   		// console.log(allTimer)
+   		// alert(allTimer)
+   		// alert(allTimer.innerHTML)
+   		// time();
+   },false)
+	oAudio.addEventListener('ended',function(){
+		oStartImg.src='images/stop.png';
+		play=true;
+	},false)
 },false)
