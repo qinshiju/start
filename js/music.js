@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		var cuT = oAudio.currentTime,
 			toT = oAudio.duration;
 		var oToTalWidth=oToTal.offsetWidth/20;
-		progress = (cuT/toT)*oToTalWidth-0.75;
+		progress = (cuT/toT)*oToTalWidth;
 		
 		oHadPlay.style.width=progress+'rem';
 		oBar.style.left=progress+'rem';
@@ -101,10 +101,10 @@ document.addEventListener('DOMContentLoaded',function(){
 		    			widthBar=0
 		    		}
 		    	}			    		
-	    		oBar.style.left = widthBar-0.75 + "rem";
+	    		oBar.style.left = widthBar + "rem";
 	           	oHadPlay.style.width=widthBar+'rem';
 		    	//不让进度条超出页面		    	
-		    	time()
+		    	// time()
 		    	return oBar.style.left
 		    }
 		    function touchEnd(e) { //手指离开屏幕
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		        var dragPaddingLeft = oBar.style.left;
 		        var changeLeft = dragPaddingLeft.replace("rem", "");
 		        numDragpaddingLeft = changeLeft;
-		        var currentTime = (numDragpaddingLeft / (oToTal.offsetWidth/20-0.75)) * oAudio.duration;//0.75是拖动圆圈的长度，减掉是为了让歌曲结束的时候不会跑到window以外
+		        var currentTime = (numDragpaddingLeft / (oToTal.offsetWidth/20)) * oAudio.duration;//0.75是拖动圆圈的长度，减掉是为了让歌曲结束的时候不会跑到window以外
 		        // console.log(currentTime)
 		        oAudio.currentTime = currentTime;
 		        time();
@@ -129,5 +129,6 @@ document.addEventListener('DOMContentLoaded',function(){
         	oStartImg.src='images/stop.png';
         	play=true;
         },false)
-        oAudio.onloadedmetadata=function(){time()}
+        // oAudio.onloadedmetadata=function(){time()}
+        oAudio.addEventListener('durationchange',function(){time()},false)
 },false)

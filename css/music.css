@@ -75,14 +75,20 @@ li{
 	background-color: #1e1e1e; 
 	position: relative;
 }
-.bar{
+.opcity{
 	width: .75rem/* 30px */;
 	height: .75rem/* 30px */;
 	background-color: #1e1e1e;
 	border-radius: 2.5rem/* 100px */;
+	margin: .875rem/* 35px */ 0;
+}				
+.bar{
+	width: 2.5rem/* 100px */;
+	height: 2.5rem/* 100px */;
+	border-radius: 2.5rem/* 100px */;
 	padding-left: 0;
 	position: absolute;
-	top: -.25rem;
+	top: -1.15rem;
 	left: 0;
 }
 .pro-time{
